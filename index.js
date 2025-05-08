@@ -14,7 +14,7 @@ app.use(express.static('public'))
 const conn = require('./db/conn')
 
 app.get('/', (req, res) => {
-    res.send('Bem vindo!')
+    res.render('home')
 })
 
 conn.sync()

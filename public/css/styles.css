@@ -1,0 +1,16 @@
+:root{
+    --primary-color: #ffc107
+}
+.logo{
+    font-size: 20pt;
+    color: var(--primary-color);
+}
+.container{
+    max-width: 730px;
+}
+.nav-link{
+    color: var(--primary-color);
+}
+.nav-link:hover{
+    color: white;
+}
