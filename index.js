@@ -61,8 +61,7 @@ const authRoutes = require('./routes/authRoutes')
 const toughtController = require('./controllers/toughtController')
 
 app.use('/toughts', toughtRoutes)
-app.use('/auth', authRoutes)
-
+app.use('/', authRoutes)
 app.get('/', toughtController.showToughts)
 
 

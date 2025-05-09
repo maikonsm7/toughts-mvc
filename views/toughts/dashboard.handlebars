@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between">
+        <h4>Meus Pensamentos</h4>
+        <a href="/toughts/add" class="btn btn-warning">Adicionar</a>
+</div>
+{{#if toughts}}
+<div class="mt-3 p-1 border rounded-3">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Título</th>
+            <th scope="col" class="text-center">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each toughts}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>
+                <div class="d-flex justify-content-around">
+                    <a href="/toughts/edit/{{this.id}}" class="nav-link"><i class="bi bi-pencil"></i></a>
+                    <a href="/toughts/remove/{{this.id}}" class="nav-link"><i class="bi bi-trash"></i></a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
+{{else}}
+<p class="form-text text-center mt-4 mb-4">Nenhum Pensamento adicionado!</p>
+{{/if}}

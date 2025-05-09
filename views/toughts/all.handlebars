@@ -1,1 +1,13 @@
-<h2>Todos os Pensamentos</h2>
+<h3 class="text-center">Todos os Pensamentos</h3>
+{{#if toughts}}
+<div class="p-2">
+    {{#each toughts}}
+    <div class="d-grid border-bottom border-warning border-1 mt-4">
+        <h4>{{this.title}}</h4>
+        <span class="form-text fst-italic">{{this.UserId}} - {{this.updatedAt}}</span>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<p class="form-text text-center mt-4 mb-4">Sem Pensamentos :/</p>
+{{/if}}

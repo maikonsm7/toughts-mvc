@@ -1,0 +1,14 @@
+<main class="form-signin w-100 m-auto">
+    <form action="/toughts/edit" method="post">
+        <input type="hidden" name="id" value="{{tought.id}}">
+        <h4 class="mb-3 border-start border-warning border-3 px-3">Editar Pensamento</h4>
+        <div class="form-floating">
+            <input type="text" class="form-control" name="title" id="title" placeholder="Título" value="{{tought.title}}">
+            <label for="title">Título</label>
+        </div>
+        <button class="btn btn-warning w-100 py-2" type="submit">Salvar</button>
+    </form>
+    <div class="text-center mt-3">
+        <a href="/toughts/dashboard" class="text-warning mt-2">Voltar</a>
+    </div>
+</main>

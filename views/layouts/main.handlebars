@@ -27,11 +27,11 @@
             <ul class="nav">
                 <li><a href="/" class="nav-link">Pensamentos</a></li>
                 {{#if session.userid}}
-                <li><a href="/#" class="nav-link">Dashboard</a></li>
-                <li><a href="/auth/logout" class="nav-link">sair</a></li>
+                <li><a href="/toughts/dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="/logout" class="nav-link">sair</a></li>
                 {{else}}
-                <li><a href="/auth/login" class="nav-link">Login</a></li>
-                <li><a href="/auth/register" class="nav-link">Registrar</a></li>
+                <li><a href="/login" class="nav-link">Login</a></li>
+                <li><a href="/register" class="nav-link">Registrar</a></li>
                 {{/if}}
             </ul>
         </header>
