@@ -5,6 +5,9 @@ class authController{
     static login(req, res){
         res.render('auth/login')
     }
+    static async loginPost(req, res){
+        const {email, pass} = req.body
+    }
     static register(req, res){
         res.render('auth/register')
     }
@@ -30,13 +33,20 @@ class authController{
 
         const user = {name, email, pass: hashedPassword}
         try {
-            await User.create(user)
+            const createdUser = await User.create(user)
+            req.session.userid = createdUser.id
             req.flash('message', 'Cadastro efetuado com sucesso!')
-            res.redirect('/')
+            req.session.save(()=>{
+                res.redirect('/')
+            })
         } catch (error) {
             console.log(error)
         }
         
+    }
+    static logout(req, res){
+        req.session.destroy()
+        res.redirect('/auth/login')
     }
 }
 
