@@ -1,0 +1,23 @@
+<main class="form-signin w-100 m-auto">
+<form action="/auth/register" method="post">
+    <h1 class="h3 mb-3 fw-normal border-start border-warning border-3 px-3">Registrar-se</h1>
+    <div class="form-floating">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Digite seu nome">
+        <label for="name">Nome</label>
+    </div>
+    <div class="form-floating">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
+        <label for="email">Email</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" name="pass" id="pass" placeholder="Digite sua senha">
+        <label for="pass">Senha</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control" name="passconfirm" id="passconfirm" placeholder="Confirme sua senha">
+        <label for="passconfirm">Confirmar Senha</label>
+    </div>
+    <button class="btn btn-warning w-100 py-2" type="submit">Registrar</button>    
+</form>
+<p class="mt-3 form-text text-center">Já possui cadastro? <a href="/auth/login" class="text-warning">Login</a></p>
+</main>

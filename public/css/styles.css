@@ -1,16 +1,49 @@
-:root{
+:root {
     --primary-color: #ffc107
 }
-.logo{
+
+.logo {
     font-size: 20pt;
     color: var(--primary-color);
 }
-.container{
+
+.container {
     max-width: 730px;
 }
-.nav-link{
+
+.nav-link {
     color: var(--primary-color);
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: white;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input{
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.msg-container{
+    text-align: center;
+}
+.msg{
+    padding: .6em .8em .6em .8em;
+    border-radius: 7px;
+}
+.danger{
+    background-color: rgb(255, 189, 189);
+    color: rgb(139, 0, 0);
+}
+.success{
+    background-color: rgb(202, 255, 189);
+    color: rgb(17, 100, 0);
 }

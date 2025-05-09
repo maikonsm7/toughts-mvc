@@ -53,9 +53,18 @@ app.use((req, res, next)=>{
     next()
 })
 
-app.get('/', (req, res) => {
-    res.render('home')
-})
+// routes
+const toughtRoutes = require('./routes/toughtRoutes')
+const authRoutes = require('./routes/authRoutes')
+
+// controller
+const toughtController = require('./controllers/toughtController')
+
+app.use('/toughts', toughtRoutes)
+app.use('/auth', authRoutes)
+
+app.get('/', toughtController.showToughts)
+
 
 // conn.sync({force: true})
 conn.sync()
