@@ -1,10 +1,33 @@
-<h3 class="text-center">Todos os Pensamentos</h3>
+<form action="/" method="get" class="d-flex mx-4">
+    <input type="text" class="form-control mx-3" name="search" placeholder="Pesquisar">
+    <input type="submit" class="btn btn-warning mx-3" value="buscar">
+</form>
+
+<div class="order-container d-flex justify-content-center align-items-center mt-3">
+    <span>Ordenar por: </span>
+    <form action="/" method="get" class="mx-2">
+    <input type="hidden" name="search" value="{{this.search}}">
+    <input type="hidden" name="order" value="ASC">
+    <button type="submit" class="btn btn-sm btn-warning"><i class="bi bi-arrow-up"></i></button>
+    </form>
+    <form action="/" method="get" class="mx-2">
+    <input type="hidden" name="search" value="{{this.search}}">
+    <input type="hidden" name="order" value="DESC">
+    <button type="submit" class="btn btn-sm btn-warning"><i class="bi bi-arrow-down"></i></button>
+    </form>
+    <a href="/" class="nav-link mx-2">Limpar</a>
+</div>
+    {{#if search}}
+    <div class="text-center mt-3">
+    <span><b class="text-warning">{{qtdToughts}}</b> Resultados encontrados</span>
+    </div>
+    {{/if}}
 {{#if toughts}}
 <div class="p-2">
     {{#each toughts}}
     <div class="d-grid border-bottom border-warning border-1 mt-4">
-        <h4>{{this.title}}</h4>
-        <span class="form-text fst-italic">{{this.UserId}} - {{this.updatedAt}}</span>
+        <h4 class="fst-italic">"{{this.title}}"</h4>
+        <span>por <span class="text-warning">{{this.User.name}}</span></span>
     </div>
     {{/each}}
 </div>

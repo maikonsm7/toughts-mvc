@@ -34,6 +34,7 @@
 }
 .msg-container{
     text-align: center;
+    padding-bottom: 1em;
 }
 .msg{
     padding: .6em .8em .6em .8em;
